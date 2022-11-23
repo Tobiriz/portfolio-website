@@ -7,38 +7,39 @@
     <title>Tobias Weinlich</title>
 
     <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
+    <script src="nav.js"></script>
+    <script src="img.js"></script>
     <script src="https://kit.fontawesome.com/e41fcb89ac.js" crossorigin="anonymous"></script>
 </head>
-<body data-nav-profile="false" data-nav-projects="false" data-nav-contact="false">
+<body data-nav-profile-data="false" data-nav-projects-data="false" data-nav-contact-data="false">
     <nav>
-        <div id="nav-link-section" class="nav-section">
+        <div id="nav-section-id" class="nav-section">
             <a href="#">
-                <div id="nav-projects" class="nav-section" onmouseenter="toggleProjects()" onmouseleave="toggleProjects()" onclick="toggleProjectsLink()">
-                    <div id="nav-projects-img">
+                <div id="nav-projects-id" class="nav-section" onmouseenter="toggleProjects()" onmouseleave="toggleProjects()" onclick="toggleProjectsLink()">
+                    <div id="nav-projects-img-id">
                         <i class="fa-solid fa-diagram-project fa-lg"></i>
                     </div>
-                    <div id="nav-projects-txt">
+                    <div id="nav-projects-txt-id">
                         PROJECTS
                     </div>
                 </div>
             </a>
             <a href="#">
-                <div id="nav-profile" class="nav-section" onmouseenter="toggleProfile()" onmouseleave="toggleProfile()" onmousedown="toggleProfileLink()">
-                    <div id="nav-profile-img">
+                <div id="nav-profile-id" class="nav-section" onmouseenter="toggleProfile()" onmouseleave="toggleProfile()" onmousedown="toggleProfileLink()">
+                    <div id="nav-profile-img-id">
                         <i class="fa-solid fa-user fa-lg"></i>
                     </div>
-                    <div id="nav-profile-txt">
+                    <div id="nav-profile-txt-id">
                         PROFILE
                     </div>
                 </div>
             </a>
             <a href="#">
-                <div id="nav-contact" class="nav-section" onmouseenter="toggleContact()" onmouseleave="toggleContact()" onclick="toggleContactLink()">
-                    <div id="nav-contact-img">
+                <div id="nav-contact-id" class="nav-section" onmouseenter="toggleContact()" onmouseleave="toggleContact()" onclick="toggleContactLink()">
+                    <div id="nav-contact-img-id">
                         <i class="fa-solid fa-address-card fa-lg"></i>
                     </div>
-                    <div id="nav-contact-txt">
+                    <div id="nav-contact-txt-id">
                         CONTACT
                     </div>
                 </div>
@@ -48,14 +49,20 @@
 
     <main>
         <article>
-            <div class="title-projects article-section">
-                <img src="img/projects.jpg" class="title-image">
+            <div id="article-projects-box-id" class="acticle-projects-box article-section">
+                <div id="projects-img-box-id" class="image-box">
+                    <img src="img/projects.jpg" class="article-image">
+                </div>
             </div>
-            <div class="title-profile article-section">
-                <img src="img/profile.jpg" class="title-image">
+            <div id="article-profile-box-id" class="acticle-profile-box article-section">
+                <div id="profile-img-box-id" class="image-box">
+                    <img src="img/profile.jpg" id="profile-img-id" class="article-image" onmouseenter="toggleProfileImg()">
+                </div>
             </div>
-            <div class="title.contact article-section">
-                <img src="img/contact.jpg" class="title-image">
+            <div id="article-contact-box-id" class="acticle-contact-box article-section">
+                <div id="contact-img-box-id" class="image-box">
+                    <img src="img/contact.jpg" class="article-image">
+                </div>
             </div>
         </article>
     </main>
