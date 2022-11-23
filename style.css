@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200,400,700&display=swap');
+
+:root {
+    --background-color: rgb(8, 16, 28);
+    --border-color: rgb(255,255,255,0.1);
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav > .nav-section {
+    padding: 1rem 1rem;
+    display: flex;
+    gap: 1rem;
+    border-left: 1px solid var(--border-color);
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-logo-section {
+    flex-basis: calc(100% / 2);
+    justify-content: flex-start;
+}
+
+#nav-link-section {
+    flex-grow: 1;
+    margin-right: 60px;
+    justify-content: flex-end;
+}
+
+#nav-profile, #nav-projects, #nav-contact {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    color: white;
+    height: 4rem;
+    width: 6rem;
+    transition: all;
+    transition-timing-function: ease;
+    cursor: pointer;
+}
+
+/*
+#nav-profile-img, #nav-profile-txt,
+#nav-projects-img, #nav-projects-txt,
+#nav-contact-img, #nav-contact-txt {
+    
+}
+*/
+
+#nav-profile-img, #nav-projects-img, #nav-contact-img {
+    position: absolute;
+    transition: 400ms;
+}
+
+#nav-profile-txt, #nav-projects-txt, #nav-contact-txt {
+    position: absolute;
+    opacity: 0.0;
+    transition: 400ms;
+}
+
+body {
+    /*background-image: radial-gradient(cirlce at center, black 0, green);
+    background-size: 800px 100%;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;*/
+    background-color: var(--background-color);
+
+}
+
+main {
+    flex-grow: 1;
+    padding: 50px;
+}
+
+main > article {
+    display: grid;
+    align-items: center;
+    height: 100%;
+    grid-template-columns: 3fr 2fr 3fr;
+}
+
+main > article > .article-section {
+    display: block;
+    height: 100%;
+    border: 1px solid var(--border-color);
+}
+
+main > article > .title-profile {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+main > article > .title-projects {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+main > article > .title-contact {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.title-image {
+    width: 450px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, a, p, span {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 100px;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}

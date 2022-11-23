@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobias Weinlich</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <script src="https://kit.fontawesome.com/e41fcb89ac.js" crossorigin="anonymous"></script>
+</head>
+<body data-nav="false">
+    <nav>
+        <div id="nav-logo-section" class="nav-section">
+            <a-custom href="#">
+                <i class="fa-solid fa-image"></i>
+            </a>
+        </div>
+        <div id="nav-link-section" class="nav-section">
+            <a href="#">
+                <div id="nav-profile" class="nav-section" onmouseenter="toggleNav('profile')" onmouseleave="toggleNav('profile')" onmousedown="toggleLink('profile')">
+                    <div id="nav-profile-img">
+                        <i class="fa-solid fa-user fa-lg"></i>
+                    </div>
+                    <div id="nav-profile-txt">
+                        PROFILE
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div id="nav-projects" class="nav-section" onmouseenter="toggleNav('projects')" onmouseleave="toggleNav('projects')" onclick="toggleLink('projects')">
+                    <div id="nav-projects-img">
+                        <i class="fa-solid fa-diagram-project fa-lg"></i>
+                    </div>
+                    <div id="nav-projects-txt">
+                        PROJECTS
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div id="nav-contact" class="nav-section" onmouseenter="toggleNav('contact')" onmouseleave="toggleNav('contact')" onclick="toggleLink('contact')">
+                    <div id="nav-contact-img">
+                        <i class="fa-solid fa-address-card fa-lg"></i>
+                    </div>
+                    <div id="nav-contact-txt">
+                        CONTACT
+                    </div>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <div class="title-projects article-section">
+                <img src="img/projects.jpg" class="title-image">
+            </div>
+            <div class="title-profile article-section">
+                <img src="img/profile.jpg" class="title-image">
+            </div>
+            <div class="title.contact article-section">
+                <img src="img/contact.jpg" class="title-image">
+            </div>
+        </article>
+    </main>
+    
+</body>
+</html>
