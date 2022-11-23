@@ -10,26 +10,11 @@
     <script defer src="app.js"></script>
     <script src="https://kit.fontawesome.com/e41fcb89ac.js" crossorigin="anonymous"></script>
 </head>
-<body data-nav="false">
+<body data-nav-profile="false" data-nav-projects="false" data-nav-contact="false">
     <nav>
-        <div id="nav-logo-section" class="nav-section">
-            <a-custom href="#">
-                <i class="fa-solid fa-image"></i>
-            </a>
-        </div>
         <div id="nav-link-section" class="nav-section">
             <a href="#">
-                <div id="nav-profile" class="nav-section" onmouseenter="toggleNav('profile')" onmouseleave="toggleNav('profile')" onmousedown="toggleLink('profile')">
-                    <div id="nav-profile-img">
-                        <i class="fa-solid fa-user fa-lg"></i>
-                    </div>
-                    <div id="nav-profile-txt">
-                        PROFILE
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div id="nav-projects" class="nav-section" onmouseenter="toggleNav('projects')" onmouseleave="toggleNav('projects')" onclick="toggleLink('projects')">
+                <div id="nav-projects" class="nav-section" onmouseenter="toggleProjects()" onmouseleave="toggleProjects()" onclick="toggleProjectsLink()">
                     <div id="nav-projects-img">
                         <i class="fa-solid fa-diagram-project fa-lg"></i>
                     </div>
@@ -39,7 +24,17 @@
                 </div>
             </a>
             <a href="#">
-                <div id="nav-contact" class="nav-section" onmouseenter="toggleNav('contact')" onmouseleave="toggleNav('contact')" onclick="toggleLink('contact')">
+                <div id="nav-profile" class="nav-section" onmouseenter="toggleProfile()" onmouseleave="toggleProfile()" onmousedown="toggleProfileLink()">
+                    <div id="nav-profile-img">
+                        <i class="fa-solid fa-user fa-lg"></i>
+                    </div>
+                    <div id="nav-profile-txt">
+                        PROFILE
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div id="nav-contact" class="nav-section" onmouseenter="toggleContact()" onmouseleave="toggleContact()" onclick="toggleContactLink()">
                     <div id="nav-contact-img">
                         <i class="fa-solid fa-address-card fa-lg"></i>
                     </div>

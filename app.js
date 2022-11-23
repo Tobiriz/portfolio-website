@@ -1,65 +1,142 @@
-function toggleNav(id) {
-    let delta;
-    switch(id) {
-        case 'profile': delta = 52; break;
-        case 'projects': delta = 65; break;
-        case 'contact': delta = 60; break;
-    }
+function toggleProfile () {
+    const img = document.getElementById("nav-profile-img");
+    const txt = document.getElementById("nav-profile-txt");
+    const nav = document.getElementById("nav-profile");
 
-    const img = document.getElementById("nav-" + id + "-img");
-    const txt = document.getElementById("nav-" + id + "-txt");
-    
-    if(document.body.dataset.nav == "false") {
-        img.style.scale = "1.3";
-        img.style.translate = "-" + delta + "px";
-        document.body.dataset.nav = "true";
-        setTimeout(showNavText, 100, txt);
+    if(document.body.dataset.navProfile == "false") {
+        expand(img, txt, nav);
+        document.body.dataset.navProfile = "true";
     } else {
-        img.style.scale = "1.0";
-        img.style.translate = "0";
-        txt.style.opacity = "0.0";
-        document.body.dataset.nav = "false";
-        setTimeout(hideNavText, 200, txt);
+        collapse(img, txt, nav);
+        document.body.dataset.navProfile = "false";
     }
 }
 
-function showNavText(txt) {
+function toggleProjects () {
+    const img = document.getElementById("nav-projects-img");
+    const txt = document.getElementById("nav-projects-txt");
+    const nav = document.getElementById("nav-projects");
+    
+    if(document.body.dataset.navProjects == "false") {
+        expand(img, txt, nav);
+        document.body.dataset.navProjects = "true";
+    } else {
+        collapse(img, txt, nav);
+        document.body.dataset.navProjects = "false";
+    }
+}
+
+function toggleContact () {
+    const img = document.getElementById("nav-contact-img");
+    const txt = document.getElementById("nav-contact-txt");
+    const nav = document.getElementById("nav-contact");
+    
+    if(document.body.dataset.navContact == "false") {
+        expand(img, txt, nav);
+        document.body.dataset.navContact = "true";
+    } else {
+        collapse(img, txt, nav);
+        document.body.dataset.navContact = "false";
+    }
+}
+
+function expand(img, txt, nav){
+    let deltaImg = txt.clientHeight * 3/7;
+    let deltaTxt = deltaImg * 2;
+
+    img.style.scale = "1.3";
+    img.style.transform = "translate(0px, " + deltaImg + "px)";
+    txt.style.transform = "translate(0px, -" + deltaTxt + "px)";
     txt.style.opacity = "1.0";
+    nav.style.background = "radial-gradient(var(--radial-gradient-color-03) 0%, var(--background-color) 60%)";
 }
 
-function hideNavText(txt) {
+function collapse(img, txt, nav) {
+    img.style.scale = "1.0";
+    img.style.transform = "translate(0)";
     txt.style.opacity = "0.0";
+    txt.style.scale = "1.0";
+    txt.style.transform = "translate(0)";
+    nav.style.background = "0";
 }
 
-function toggleLink(id) {
-    let deltaImg;
-    switch(id) {
-        case 'profile': deltaImg = 44; break;
-        case 'projects': deltaImg = 57; break;
-        case 'contact': deltaImg = 52; break;
-    }
+function toggleProfileLink() {
+    const img = document.getElementById("nav-profile-img");
+    const txt = document.getElementById("nav-profile-txt");
+    const nav = document.getElementById("nav-profile");
 
-    const img = document.getElementById("nav-" + id + "-img");
-    const txt = document.getElementById("nav-" + id + "-txt");
+    toggleLink(img, txt, nav);
+    setTimeout(resetProfileLink, 1000, img, txt, nav);
+}
+
+function toggleProjectsLink() {
+    const img = document.getElementById("nav-projects-img");
+    const txt = document.getElementById("nav-projects-txt");
+    const nav = document.getElementById("nav-projects");
+
+    toggleLink(img, txt, nav);
+    setTimeout(resetProjectsLink, 1000, img, txt, nav);
+}
+
+function toggleContactLink() {
+    const img = document.getElementById("nav-contact-img");
+    const txt = document.getElementById("nav-contact-txt");
+    const nav = document.getElementById("nav-contact");
+
+    toggleLink(img, txt, nav);
+    setTimeout(resetContactLink, 1000, img, txt, nav);
+}
+
+function resetProfileLink(img, txt, nav) {
+    if(document.body.dataset.navProfile == "false") {
+        collapse(img, txt, nav);
+    } else {
+        resetNav(img, txt, nav);
+    }
+}
+
+function resetProjectsLink(img, txt, nav) {
+    if(document.body.dataset.navProjects == "false") {
+        collapse(img, txt, nav);
+    } else {
+        resetNav(img, txt, nav);
+    }
+}
+
+function resetContactLink(img, txt, nav) {
+    if(document.body.dataset.navContact == "false") {
+        collapse(img, txt, nav);
+    } else {
+        resetNav(img, txt, nav);
+    }
+}
+
+function toggleLink(img, txt, nav) {
+    let deltaImg = txt.clientHeight * 3/7;
+    let deltaTxt = deltaImg * 2;
 
     img.style.scale = "1.0";
-    img.style.translate = "-" + deltaImg + "px";
+    img.style.transform = "translate(0px, " + deltaImg + "px)";
     txt.style.scale = "0.8";
-    txt.style.translate = "-7px";
-
-    setTimeout(resetNav, 1000, img, txt, deltaImg);
+    txt.style.transform = "translate(0px, -" + deltaTxt + "px)";
+    nav.style.background = "radial-gradient(var(--radial-gradient-color-05) 0%, var(--background-color) 60%)";
 }
 
-function resetNav(img, txt, deltaImg) {
-    if(document.body.dataset.nav == "false") {
-        img.style.scale = "1.0";
-        img.style.translate = "0";
-        txt.style.scale = "1.0";
-        txt.style.opacity = "0.0";
-    } else {
-        img.style.scale = "1.3";
-        img.style.translate = "-" + (deltaImg + 8) + "px";
-        txt.style.scale = "1.0";
-        txt.style.translate = "0px";
-    }
+/*function resetNavOrig(img, txt) {
+    img.style.scale = "1.0";
+    img.style.transform = "translate(0)";
+    txt.style.scale = "1.0";
+    txt.style.opacity = "0.0";
+    nav.style.background = "0";
+}*/
+
+function resetNav(img, txt, nav) {
+    let deltaImg = txt.clientHeight * 3/7;
+    let deltaTxt = deltaImg * 2;
+
+    img.style.scale = "1.3";
+    img.style.transform = "translate(0px, " + deltaImg + "px)";
+    txt.style.scale = "1.0";
+    txt.style.transform = "translate(0px, -" + deltaTxt + "px)";
+    nav.style.background = "radial-gradient(var(--radial-gradient-color-03) 0%, var(--background-color) 60%)";
 }
