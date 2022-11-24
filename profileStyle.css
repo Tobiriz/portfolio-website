@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200,400,700&display=swap');
+
+:root {
+    --background-color: rgb(8, 16, 28);
+    --background-color-transparent: rgb(8, 16, 28, 0);
+    --border-color: rgb(255,255,255,0.2);
+    --radial-gradient-color-03: rgb(255,255,255,0.2);
+    --radial-gradient-color-05: rgb(255,255,255,0.3);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav > .nav-section {
+    padding: 1rem 1rem;
+    display: flex;
+    column-gap: 4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-section-id {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+#nav-profile-id, #nav-projects-id, #nav-contact-id {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppin", sans-serif;
+    font-weight: 400;
+    color: white;
+    height: 5rem;
+    width: 8rem;
+    transition: all;
+    transition-timing-function: ease;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+#nav-profile-img-id, #nav-projects-img-id, #nav-contact-img-id {
+    position: absolute;
+    transition: 400ms;
+}
+
+#nav-profile-txt-id, #nav-projects-txt-id, #nav-contact-txt-id {
+    position: absolute;
+    opacity: 0.0;
+    transition: 400ms;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, a, p, span {
+    font-family: "Poppin", sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}

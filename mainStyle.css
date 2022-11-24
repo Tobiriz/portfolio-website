@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200,400,700&display=swap');
+
+:root {
+    --background-color: rgb(8, 16, 28);
+    --background-color-07: rgba(8, 16, 28,0.7);
+    --background-color-transparent: rgba(8, 16, 28, 0);
+    --border-color: rgba(255,255,255,0.2);
+    --gradient-color-white-0: rgba(255,255,255,0);
+    --gradient-color-white-1: rgba(255,255,255,0.6);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+main {
+    flex-grow: 1;
+}
+
+main > article {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 2fr 2fr;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+main > article > .article-section {
+    display: block;
+    height: 75vh;
+    width: 30vw;
+    object-fit: cover;
+    overflow: hidden;
+    background-size: cover;
+}
+
+
+.info-box {
+    height: 50%;
+    width: 80%;
+    margin-top: 25%;
+    margin-bottom: 25%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: var(--background-color-07);
+    border: 2px solid var(--border-color);
+    text-align: center;
+    transition: 200ms;
+    transition-timing-function: ease-in;
+    opacity: 0;
+}
+
+
+main > article > .acticle-profile-box, #article-profile-box-id {
+    background-image: 
+    linear-gradient(to bottom, var(--background-color-transparent), var(--background-color)),
+    url('img/profile_crop.jpg');
+    margin-left: 0;
+    margin-right: 0;
+    transition: 400ms;
+}
+
+main > article > .acticle-projects-box, #acticle-projects-box-id {
+    background-image: 
+    linear-gradient(to bottom, var(--background-color-transparent), var(--background-color)),
+    url('img/projects_crop.jpg');
+    margin-left: auto;
+    margin-right: 0;
+    transition: 400ms;
+}
+
+main > article > .acticle-contact-box, #acticle-contact-box-id {
+    background-image: 
+    linear-gradient(to bottom, var(--background-color-transparent), var(--background-color)),
+    url('img/contact_crop.jpg');
+    margin-left: 0;
+    margin-right: auto;
+    transition: 400ms;
+}
+
+h1 {
+    font-family: "Poppin", sans-serif;
+    font-size: 4vmin;
+    color: white;
+    margin-top: 5vh;
+}
+
+p {
+    font-family: "Poppin", sans-serif;
+    font-size: 2.5vmin;
+    color: white;
+}
+
+.arrow {
+    color: white;
+    scale: 1.5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#language-icon {
+    color: white;
+}

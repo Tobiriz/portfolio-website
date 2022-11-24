@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobias Weinlich | Profile</title>
+
+    <link rel="stylesheet" href="profileStyle.css">
+    <script src="nav.js"></script>
+    <script src="https://kit.fontawesome.com/e41fcb89ac.js" crossorigin="anonymous"></script>
+</head>
+<body data-nav-profile-data="false" data-nav-projects-data="false" data-nav-contact-data="false">
+    <nav>
+        <div id="nav-section-id" class="nav-section">
+            <a href="#">
+                <div id="nav-projects-id" class="nav-section" onmouseenter="toggleProjects()" onmouseleave="toggleProjects()" onclick="toggleProjectsLink()">
+                    <div id="nav-projects-img-id">
+                        <i class="fa-solid fa-diagram-project fa-lg"></i>
+                    </div>
+                    <div id="nav-projects-txt-id">
+                        PROJECTS
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div id="nav-profile-id" class="nav-section" onmouseenter="toggleProfile()" onmouseleave="toggleProfile()" onmousedown="toggleProfileLink()">
+                    <div id="nav-profile-img-id">
+                        <i class="fa-solid fa-user fa-lg"></i>
+                    </div>
+                    <div id="nav-profile-txt-id">
+                        PROFILE
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div id="nav-contact-id" class="nav-section" onmouseenter="toggleContact()" onmouseleave="toggleContact()" onclick="toggleContactLink()">
+                    <div id="nav-contact-img-id">
+                        <i class="fa-solid fa-address-card fa-lg"></i>
+                    </div>
+                    <div id="nav-contact-txt-id">
+                        CONTACT
+                    </div>
+                </div>
+            </a>
+        </div>
+    </nav>    
+</body>
+</html>
